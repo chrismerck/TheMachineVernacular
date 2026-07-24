@@ -65,7 +65,7 @@ layout: default
     {% else %}
     <p class="apparatus first-use"><span class="section-label">First known use</span>
       {{ e.first_use.date | date: "%-d %B %Y" }},
-      <a href="{{ e.first_use.url }}">{% if e.first_use.note %}{{ e.first_use.note }}{% else %}{{ e.first_use.url }}{% endif %}</a>.</p>
+      <a href="{{ e.first_use.url }}">{% if e.first_use.source %}{{ e.first_use.source | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% else %}{{ e.first_use.url }}{% endif %}</a>{% if e.first_use.note %} — {{ e.first_use.note | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% endif %}.</p>
     <p class="apparatus attestation">{{ e.attestation.model }}, {{ e.attestation.date | date: "%-d %B %Y" }},
       observed by <a href="https://github.com/{{ e.attestation.observer }}">@{{ e.attestation.observer }}</a>.</p>
     {% endif %}

@@ -52,9 +52,10 @@ date). Earliest dated source wins. Imprecise dates are fine: `2019`,
 ## 3. Record the result
 
 - Found a published prior use → `first_use: {date, type: published, url,
-  note}` where note is a one-line source description ("blog post by Dan
-  Luu"). The entry will also carry a separate machine-attestation line
-  (model, date, observer).
+  source, note?}` where source is the short name of the publication ("blog
+  post by Dan Luu", "RFC 793") — it becomes the hyperlink text — and note
+  is an optional unlinked one-line gloss rendered after it. The entry will
+  also carry a separate machine-attestation line (model, date, observer).
 - Nothing found → `first_use: {date: <today>, type: correspondence}` — the
   first known use *is* this conversation, merged with the attestation line.
 

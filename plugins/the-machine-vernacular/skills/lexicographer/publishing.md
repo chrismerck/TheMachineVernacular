@@ -19,7 +19,7 @@ content in YAML frontmatter (see any existing entry, or
 CONTRIBUTING.md, for the schema):
 
     headword, pos, class, senses[{label, definition}], etymology,
-    first_use{date, type, url?, note?}, attestation{model, date, observer}
+    first_use{date, type, url?, source?, note?}, attestation{model, date, observer}
 
 `attestation.model` is the model whose usage occasioned the entry — your
 own identity if the coinage happened in this session. If the occasioning

@@ -45,7 +45,8 @@ first_use:
   date: 2026-07-23     # ISO; "2026-07" or "2026" if imprecise (quoted)
   type: correspondence # published | correspondence
   url:                 # required when type: published
-  note:                # one-line source description, e.g. "blog post by X"
+  source:              # name of the publication — becomes the link text
+  note:                # optional unlinked gloss, rendered after the link
 attestation:
   model: Claude Fable 5   # the model whose usage occasioned the entry
   date: 2026-07-23

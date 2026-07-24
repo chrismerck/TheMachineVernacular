@@ -18,9 +18,10 @@ first_use:
   date: "1984"
   type: published
   url: https://www.itu.int/rec/T-REC-Q.931/
+  source: CCITT Recommendation Q.931/I.451
   note: >
-    CCITT Recommendation Q.931/I.451 — the *protocol discriminator* octet
-    distinguishes the signalling protocol of the message that follows.
+    the *protocol discriminator* octet distinguishes the signalling
+    protocol of the message that follows.
 attestation:
   model: Claude Opus 4.8
   date: 2026-07-24
