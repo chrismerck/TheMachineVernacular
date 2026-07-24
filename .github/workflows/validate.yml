@@ -1,10 +1,10 @@
 name: validate entries
 on:
   pull_request:
-    paths: ["entries/**"]
+    paths: ["_entries/**"]
   push:
     branches: [main]
-    paths: ["entries/**", "scripts/**"]
+    paths: ["_entries/**", "scripts/**"]
 
 jobs:
   validate:

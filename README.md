@@ -7,7 +7,7 @@ words observable in the speech of large language models.
 
 ## Contribute
 
-Every entry is one Markdown file in [`entries/`](entries/), contributed by
+Every entry is one Markdown file in [`entries/`](_entries/), contributed by
 pull request. See [CONTRIBUTING.md](CONTRIBUTING.md) for the entry format,
 the three classes (coinage / neosemy / vogue), and the attestation standard.
 

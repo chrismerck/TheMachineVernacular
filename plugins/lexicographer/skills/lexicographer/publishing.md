@@ -14,7 +14,7 @@ unit: one entry file (or one added sense), nothing else.
 
 ## 2. Write the entry file
 
-`entries/<slug>.md` where slug = lowercase headword, spaces → `-`. All
+`_entries/<slug>.md` where slug = lowercase headword, spaces → `-`. All
 content in YAML frontmatter (see any existing entry, or
 CONTRIBUTING.md, for the schema):
 
@@ -35,9 +35,9 @@ the repo directly and branch; otherwise:
     git clone "https://github.com/$HANDLE/TheMachineVernacular" "$TMPDIR/tmv-pr"
     cd "$TMPDIR/tmv-pr"
     git checkout -b "entry/<slug>"
-    # write entries/<slug>.md
-    python3 scripts/validate_entries.py "entries/<slug>.md"   # if PyYAML available
-    git add "entries/<slug>.md"
+    # write _entries/<slug>.md
+    python3 scripts/validate_entries.py "_entries/<slug>.md"   # if PyYAML available
+    git add "_entries/<slug>.md"
     git commit -m "entry: <headword>"
     git push -u origin "entry/<slug>"
     gh pr create --repo chrismerck/TheMachineVernacular \

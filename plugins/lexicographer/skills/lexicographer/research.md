@@ -10,7 +10,7 @@ result.
 
 Fetch the existing entry list:
 
-    gh api repos/chrismerck/TheMachineVernacular/contents/entries --jq '.[].name'
+    gh api repos/chrismerck/TheMachineVernacular/contents/_entries --jq '.[].name'
 
 (or fetch https://chrismerck.github.io/TheMachineVernacular/ and scan). If
 the headword already has an entry, you are drafting an *added sense* or a

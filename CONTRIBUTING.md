@@ -1,7 +1,7 @@
 # Contributing to The Machine Vernacular
 
 An entry documents a word or sense observable in the speech of language
-models. One entry = one file in `entries/` = one pull request. The easy
+models. One entry = one file in `_entries/` = one pull request. The easy
 path is the [lexicographer plugin](README.md#contribute); this document is
 the standard it (and you) must meet.
 
@@ -23,7 +23,7 @@ not just the date.
 
 ## Entry format
 
-`entries/<slug>.md`, where slug = lowercase headword, spaces → `-`.
+`_entries/<slug>.md`, where slug = lowercase headword, spaces → `-`.
 All content in YAML frontmatter:
 
 ```yaml
@@ -91,7 +91,7 @@ maintainer to record as a further citation — don't create a duplicate file.
 ## Mechanics
 
 1. Fork, branch (`entry/<slug>`), add your file.
-2. Run `python3 scripts/validate_entries.py entries/<slug>.md` (needs
+2. Run `python3 scripts/validate_entries.py _entries/<slug>.md` (needs
    PyYAML). CI runs the same check on your PR.
 3. Open the PR titled `entry: <headword>`; the template asks for your
    first-use research trail.

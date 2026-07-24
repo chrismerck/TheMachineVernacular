@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Validate Machine Vernacular entry files against the schema.
 
-Usage: validate_entries.py [file-or-dir ...]   (default: entries/)
+Usage: validate_entries.py [file-or-dir ...]   (default: _entries/)
 Exit 0 = all valid. Errors fail; style warnings (word counts) do not.
 """
 import re
@@ -86,7 +86,7 @@ def check(path):
 
 
 def main(argv):
-    targets = [Path(a) for a in argv] or [Path("entries")]
+    targets = [Path(a) for a in argv] or [Path("_entries")]
     files = []
     for t in targets:
         files += sorted(t.glob("*.md")) if t.is_dir() else [t]
