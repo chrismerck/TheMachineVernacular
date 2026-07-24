@@ -1,7 +1,7 @@
 title: The Machine Vernacular
 description: A dictionary of emergent machine usage
-url: "https://chrismerck.github.io"
-baseurl: "/TheMachineVernacular"
+url: "https://www.themachinevernacular.net"
+baseurl: ""
 markdown: kramdown
 
 collections:
