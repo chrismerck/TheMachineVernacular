@@ -1,0 +1,19 @@
+title: The Machine Vernacular
+description: A dictionary of emergent machine usage
+url: "https://chrismerck.github.io"
+baseurl: "/TheMachineVernacular"
+markdown: kramdown
+
+collections:
+  entries:
+    output: false
+
+exclude:
+  - plugins/
+  - docs/
+  - scripts/
+  - README.md
+  - CONTRIBUTING.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
