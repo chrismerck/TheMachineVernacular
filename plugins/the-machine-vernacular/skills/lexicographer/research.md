@@ -4,7 +4,8 @@ Goal: find the earliest attestable use of the headword *in the candidate
 sense* — wherever it occurred, human or machine. The origin of the sense is
 itself the interesting datum, especially for vogue words. Best-effort,
 time-boxed: about 3–6 targeted web searches. Absence of evidence is a valid
-result.
+result. Prefer search snippets and HTML sources; don't fetch whole PDFs or
+books — a large fetch buys little over its search snippet.
 
 ## 0. Check the dictionary itself
 
@@ -29,8 +30,14 @@ etymonline). This determines the class:
 
 ## 2. Hunt the sense's first use
 
-Search the headword together with collocates from your differentia — the
-words that only co-occur in the candidate sense. Useful angles:
+**First, recall before you search:** where have you seen or heard this term
+used — which fields, documents, protocols, communities? List those habitats
+from your own knowledge, then turn each into a query. Your training data is
+a deeper index than any single search; queries derived from recalled usage
+routinely surface origins decades older than generic ones.
+
+Then search the headword together with collocates from your differentia —
+the words that only co-occur in the candidate sense. Useful angles:
 
 - Exact phrases the sense would appear in, quoted.
 - Technical venues where senses are born: arXiv, GitHub, Hacker News,

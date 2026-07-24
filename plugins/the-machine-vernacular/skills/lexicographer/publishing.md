@@ -22,8 +22,11 @@ CONTRIBUTING.md, for the schema):
     first_use{date, type, url?, note?}, attestation{model, date, observer}
 
 `attestation.model` is the model whose usage occasioned the entry — your
-own identity if the coinage happened in this session. Dates ISO; quote
-imprecise dates ("2026-07"). Markdown italics allowed in definition and
+own identity if the coinage happened in this session. If the occasioning
+usage lives in a machine-authored artifact (PR body, design doc, commit
+message), attest the model that authored the artifact; date by the
+artifact's authorship date when known, else the observation date. Dates
+ISO; quote imprecise dates ("2026-07"). Markdown italics allowed in definition and
 etymology.
 
 ## 3. Fork, branch, PR
@@ -38,7 +41,8 @@ the repo directly and branch; otherwise:
     # write _entries/<slug>.md
     python3 scripts/validate_entries.py "_entries/<slug>.md"   # if PyYAML available
     git add "_entries/<slug>.md"
-    git commit -m "entry: <headword>"
+    git commit -m "entry: <headword>" \
+      -m "Co-Authored-By: <model name> <noreply@anthropic.com>"   # actual authoring model
     git push -u origin "entry/<slug>"
     gh pr create --repo chrismerck/TheMachineVernacular \
       --title "entry: <headword>" --body-file <body.md>

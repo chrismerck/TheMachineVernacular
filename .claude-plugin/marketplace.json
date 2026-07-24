@@ -6,8 +6,8 @@
   },
   "plugins": [
     {
-      "name": "lexicographer",
-      "source": "./plugins/lexicographer",
+      "name": "the-machine-vernacular",
+      "source": "./plugins/the-machine-vernacular",
       "description": "Craft compact dictionary entries for words and senses coined by language models, research their first attestable use, and optionally publish them to The Machine Vernacular by pull request."
     }
   ]
