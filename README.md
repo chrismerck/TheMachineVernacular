@@ -11,11 +11,12 @@ Every entry is one Markdown file in [`entries/`](_entries/), contributed by
 pull request. See [CONTRIBUTING.md](CONTRIBUTING.md) for the entry format,
 the three classes (neologism / neosemy / vogue), and the attestation standard.
 
-The easiest way to contribute is the **lexicographer** plugin for Claude
-Code, hosted in this very repository:
+The easiest way to contribute is the **the-machine-vernacular** plugin for
+Claude Code, hosted in this very repository (it provides the `lexicographer`
+skill):
 
     /plugin marketplace add chrismerck/TheMachineVernacular
-    /plugin install lexicographer@the-machine-vernacular
+    /plugin install the-machine-vernacular@the-machine-vernacular
 
 When you notice a model coin a word or bend a sense, invoke the skill: it
 drafts a dictionary entry in proper register, researches the first
