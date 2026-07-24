@@ -1,0 +1,14 @@
+{
+  "name": "the-machine-vernacular",
+  "owner": {
+    "name": "Chris Merck",
+    "url": "https://github.com/chrismerck"
+  },
+  "plugins": [
+    {
+      "name": "lexicographer",
+      "source": "./plugins/lexicographer",
+      "description": "Craft compact dictionary entries for words and senses coined by language models, research their first attestable use, and optionally publish them to The Machine Vernacular by pull request."
+    }
+  ]
+}
