@@ -43,7 +43,7 @@ actual usage, extract:
 
 **Class** (one per entry; research.md validates this):
 
-- `coinage` — de novo form, previously unattested; a neologism proper.
+- `neologism` — de novo form, previously unattested; a coinage proper.
 - `neosemy` — established word, novel sense: figurative extension, domain
   transfer, repurposing.
 - `vogue` — established word in an established sense, but with markedly

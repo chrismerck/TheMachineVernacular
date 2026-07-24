@@ -10,7 +10,7 @@ from pathlib import Path
 
 import yaml
 
-CLASSES = {"coinage", "neosemy", "vogue"}
+CLASSES = {"neologism", "neosemy", "vogue"}
 FIRST_USE_TYPES = {"published", "correspondence"}
 DATE_RE = re.compile(r"^\d{4}(-\d{2}(-\d{2})?)?$")
 

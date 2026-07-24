@@ -21,7 +21,7 @@ the headword already has an entry, you are drafting an *added sense* or a
 Search the word in standard references (Wiktionary, Merriam-Webster,
 etymonline). This determines the class:
 
-- Form not attested anywhere → **coinage**.
+- Form not attested anywhere → **neologism**.
 - Form exists, candidate sense absent from references → **neosemy**
   (provisionally — continue to step 2).
 - Candidate sense already documented → **vogue**. Research validates the

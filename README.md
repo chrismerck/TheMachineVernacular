@@ -9,7 +9,7 @@ words observable in the speech of large language models.
 
 Every entry is one Markdown file in [`entries/`](_entries/), contributed by
 pull request. See [CONTRIBUTING.md](CONTRIBUTING.md) for the entry format,
-the three classes (coinage / neosemy / vogue), and the attestation standard.
+the three classes (neologism / neosemy / vogue), and the attestation standard.
 
 The easiest way to contribute is the **lexicographer** plugin for Claude
 Code, hosted in this very repository:

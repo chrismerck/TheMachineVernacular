@@ -9,7 +9,7 @@ the standard it (and you) must meet.
 
 Classify your observation as exactly one of:
 
-- **coinage** — a de novo form previously unattested; a neologism proper.
+- **neologism** — a de novo form previously unattested; a coinage proper.
 - **neosemy** — an established word bearing a novel sense: figurative
   extension, domain transfer, or repurposing.
 - **vogue** — an established word in an established sense, but with
@@ -30,7 +30,7 @@ All content in YAML frontmatter:
 ---
 headword: gardener
 pos: n.                # n., v., adj., n. attrib., ...
-class: neosemy         # coinage | neosemy | vogue
+class: neosemy         # neologism | neosemy | vogue
 senses:
   - label: organizational computing    # italic subject-area label
     definition: >

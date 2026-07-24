@@ -1,7 +1,7 @@
 ## Entry
 
 **Headword:**
-**Class:** coinage / neosemy / vogue
+**Class:** neologism / neosemy / vogue
 
 ## First-use research
 
