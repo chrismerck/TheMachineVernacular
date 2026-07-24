@@ -4,10 +4,14 @@ layout: default
 {% assign entries = site.entries | sort_natural: "headword" %}
 
 <header class="masthead">
-  <h1>The Machine Vernacular</h1>
-  <p class="thesis">A dictionary of emergent machine usage — the coinages,
-  new senses, and vogue words observable in the speech of large language
-  models, each attested to a dated first use.</p>
+  <div class="rule-double" aria-hidden="true"></div>
+  <p class="over-title">A Dictionary of</p>
+  <h1>The Machine<br>Vernacular</h1>
+  <p class="thesis">the coinages, new senses, and vogue words observable
+  in the speech of large language models, each attested to a dated
+  first use</p>
+  <p class="ornament" aria-hidden="true">&#8258;</p>
+  <div class="rule-double" aria-hidden="true"></div>
 </header>
 
 <section class="legend">
@@ -39,30 +43,30 @@ layout: default
 {% assign prev = "" %}
 {% for e in entries %}
   {% assign l = e.headword | slice: 0 | upcase %}
+  {% if l != prev %}
+  <div class="letter-head" id="letter-{{ l }}" aria-hidden="true"><span>{{ l }}</span></div>
+  {% assign prev = l %}
+  {% endif %}
   <article class="entry" id="{{ e.headword | slugify }}">
-    {% if l != prev %}<span class="letter-anchor" id="letter-{{ l }}"></span>{% assign prev = l %}{% endif %}
     <h2 class="headword"><a href="#{{ e.headword | slugify }}">{{ e.headword }}</a>
-      <span class="pos">({{ e.pos }})</span>
-      <span class="chip chip-{{ e.class }}">{{ e.class }}</span></h2>
+      <span class="pos">{{ e.pos }}</span>
+      <span class="chip chip-entry chip-{{ e.class }}">{{ e.class }}</span></h2>
     <ol class="senses">
       {% for s in e.senses %}
       <li><span class="label">({{ s.label }})</span>
         {{ s.definition | markdownify | remove: "<p>" | remove: "</p>" }}</li>
       {% endfor %}
     </ol>
-    <p class="apparatus"><span class="section-label">Etymology</span>
-      {{ e.etymology | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+    <p class="apparatus etymology">[{{ e.etymology | markdownify | remove: "<p>" | remove: "</p>" | strip }}]</p>
     {% if e.first_use.type == "correspondence" %}
-    <p class="apparatus"><span class="section-label">First known use</span>
-      Attested {{ e.first_use.date | date: "%-d %B %Y" }}, in correspondence
+    <p class="apparatus attestation">Attested {{ e.first_use.date | date: "%-d %B %Y" }}, in correspondence
       between <a href="https://github.com/{{ e.attestation.observer }}">@{{ e.attestation.observer }}</a>
       and {{ e.attestation.model }}.</p>
     {% else %}
-    <p class="apparatus"><span class="section-label">First known use</span>
+    <p class="apparatus first-use"><span class="section-label">First known use</span>
       {{ e.first_use.date | date: "%-d %B %Y" }},
       <a href="{{ e.first_use.url }}">{% if e.first_use.note %}{{ e.first_use.note }}{% else %}{{ e.first_use.url }}{% endif %}</a>.</p>
-    <p class="apparatus"><span class="section-label">Machine attestation</span>
-      {{ e.attestation.model }}, {{ e.attestation.date | date: "%-d %B %Y" }},
+    <p class="apparatus attestation">{{ e.attestation.model }}, {{ e.attestation.date | date: "%-d %B %Y" }},
       observed by <a href="https://github.com/{{ e.attestation.observer }}">@{{ e.attestation.observer }}</a>.</p>
     {% endif %}
   </article>

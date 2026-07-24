@@ -1,4 +1,4 @@
-/* The Machine Vernacular — sepia dictionary paper, lamplight dark mode */
+/* The Machine Vernacular — letterpress dictionary paper, lamplight dark mode */
 
 @font-face {
   font-family: "EB Garamond";
@@ -15,23 +15,34 @@
   src: url("../fonts/ebgaramond-bold.woff2") format("woff2");
   font-weight: 700; font-style: normal; font-display: swap;
 }
+@font-face {
+  font-family: "IM Fell Double Pica SC";
+  src: url("../fonts/imfelldoublepicasc-regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
 
 :root {
-  --paper: #f6eeda;
-  --ink: #3d3427;
-  --ink-muted: #7c705b;
+  --paper: #f4ecd8;
+  --paper-deep: #ecdfc2;
+  --ink: #3a3122;
+  --ink-muted: #857863;
+  --ink-faint: #9d9077;
   --rubric: #8a3324;
-  --rule: #d9caa9;
-  --highlight: #efe2c0;
+  --rule: #cbba95;
+  --rule-strong: #a89468;
+  --highlight: #eee0bd;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #211c15;
-    --ink: #e9dfc9;
-    --ink-muted: #9c917c;
+    --paper: #201b13;
+    --paper-deep: #1a1610;
+    --ink: #e6dcc4;
+    --ink-muted: #978b76;
+    --ink-faint: #7d7260;
     --rubric: #cd7a63;
-    --rule: #3d352a;
-    --highlight: #2e2820;
+    --rule: #3c3427;
+    --rule-strong: #57492f;
+    --highlight: #2d2717;
   }
 }
 
@@ -41,31 +52,66 @@ html { font-size: 18px; }
 body {
   font-family: "EB Garamond", "Iowan Old Style", "Palatino Linotype",
     Palatino, Georgia, serif;
-  background: var(--paper);
+  background:
+    radial-gradient(120% 90% at 50% 0%, transparent 55%, var(--paper-deep) 100%),
+    var(--paper);
   color: var(--ink);
   line-height: 1.5;
   max-width: 42rem;
   margin: 0 auto;
-  padding: 3.5rem 1.25rem 5rem;
+  padding: 3rem 1.25rem 5rem;
   font-feature-settings: "liga" 1, "onum" 1;
   text-rendering: optimizeLegibility;
 }
 
 a { color: var(--rubric); text-decoration-thickness: 1px; text-underline-offset: 2px; }
 
-/* --- masthead & legend --- */
+/* --- masthead: title page --- */
+.masthead { text-align: center; }
+.rule-double {
+  border-top: 3px double var(--rule-strong);
+  border-bottom: 1px solid var(--rule-strong);
+  height: 6px;
+}
+.masthead .over-title {
+  margin-top: 1.6rem;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink-muted);
+  letter-spacing: .04em;
+}
 .masthead h1 {
-  font-size: 2.7rem; font-weight: 700; line-height: 1.1;
-  letter-spacing: .005em;
+  font-family: "IM Fell Double Pica SC", "EB Garamond", Georgia, serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: .035em;
+  margin-top: .35rem;
+  text-wrap: balance;
 }
 .masthead .thesis {
-  margin-top: .75rem; font-style: italic; color: var(--ink-muted);
+  margin: 1.1rem auto 0;
+  max-width: 30rem;
+  font-style: italic;
+  color: var(--ink-muted);
 }
+.masthead .ornament {
+  margin: 1.1rem 0 1.4rem;
+  font-size: 1.25rem;
+  color: var(--rubric);
+  letter-spacing: .4em;
+}
+
+/* --- legend --- */
 .legend {
-  margin: 2.25rem 0; padding: 1.1rem 1.25rem;
+  margin: 2.25rem 0;
+  padding: 1.1rem 1.25rem;
   border: 1px solid var(--rule);
+  outline: 1px solid var(--rule);
+  outline-offset: 3px;
 }
 .legend p { margin: .35rem 0; }
+.legend .chip { margin-right: .35em; }
 .legend .standard {
   margin-top: .8rem; padding-top: .8rem;
   border-top: 1px solid var(--rule);
@@ -73,54 +119,102 @@ a { color: var(--rubric); text-decoration-thickness: 1px; text-underline-offset:
 }
 
 /* --- alphabet bar --- */
-.alpha { margin: 1.5rem 0 .5rem; }
+.alpha { margin: 1.75rem 0 .5rem; text-align: center; }
 .alpha a {
-  display: inline-block; padding: 0 .3rem;
+  display: inline-block; padding: 0 .35rem;
   font-weight: 700; text-decoration: none;
 }
 .alpha a:hover { color: var(--ink); }
 
-/* --- entries --- */
-.entry { padding: 1.5rem 0; border-top: 1px solid var(--rule); position: relative; }
-.entry:target { background: var(--highlight); }
-.letter-anchor { position: absolute; top: -1rem; }
+/* --- letter dividers --- */
+.letter-head {
+  display: flex; align-items: center; gap: 1rem;
+  margin: 2.5rem 0 .5rem;
+  color: var(--rule-strong);
+}
+.letter-head::before, .letter-head::after {
+  content: ""; flex: 1;
+  border-top: 1px solid var(--rule);
+}
+.letter-head span {
+  font-family: "IM Fell Double Pica SC", "EB Garamond", Georgia, serif;
+  font-size: 2rem; line-height: 1;
+  color: var(--ink-muted);
+}
 
-.headword { font-size: 1.65rem; font-weight: 700; line-height: 1.2; }
+/* --- entries --- */
+.entry { padding: 1.1rem 0 1.4rem; }
+.entry + .entry { border-top: 1px solid var(--rule); }
+.entry:target { background: var(--highlight); }
+
+.headword {
+  display: flex; align-items: baseline; gap: .45em;
+  font-size: 1.55rem; font-weight: 700; line-height: 1.2;
+}
 .headword a { color: inherit; text-decoration: none; }
 .headword a:hover { color: var(--rubric); }
-.pos { font-weight: 400; font-style: italic; font-size: 1.05rem; }
+.pos { font-weight: 400; font-style: italic; font-size: 1rem; color: var(--ink-muted); }
 
 .chip {
-  display: inline-block; vertical-align: .25em;
-  font-size: .58em; font-weight: 400; font-style: normal;
-  letter-spacing: .09em; text-transform: uppercase;
-  color: var(--rubric); border: 1px solid currentColor;
-  border-radius: 2px; padding: .05em .5em; margin-left: .35em;
+  font-size: .6rem; font-weight: 400; font-style: normal;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--rubric);
 }
+.legend .chip {
+  border: 1px solid currentColor; border-radius: 2px;
+  padding: .05em .5em; font-size: .66rem;
+}
+.chip-entry { margin-left: auto; color: var(--ink-faint); }
 
-.senses { margin: .6rem 0 .6rem 0; padding-left: 2rem; }
-.senses li { margin: .4rem 0; }
+.senses {
+  margin: .55rem 0 .55rem; padding-left: 1.9rem;
+}
+.senses li { margin: .4rem 0; padding-left: .2rem; }
+.senses li::marker { font-weight: 700; }
 .senses .label { font-style: italic; }
 
-.apparatus { margin: .45rem 0 0; font-size: .95rem; }
+/* --- apparatus: etymology, first use, attestation --- */
+.apparatus { margin: .4rem 0 0; font-size: .95rem; }
+.etymology { color: var(--ink); }
 .section-label {
-  font-size: .72em; letter-spacing: .09em; text-transform: uppercase;
+  font-size: .72em; letter-spacing: .1em; text-transform: uppercase;
   color: var(--ink-muted); margin-right: .4em;
 }
+.attestation {
+  font-size: .8rem;
+  color: var(--ink-faint);
+  margin-top: .55rem;
+}
+.attestation a { color: inherit; }
 
 /* --- footer --- */
 footer {
-  margin-top: 3rem; padding-top: 1.25rem;
-  border-top: 1px solid var(--rule);
+  margin-top: 3.5rem; padding-top: 1.25rem;
+  border-top: 3px double var(--rule-strong);
   font-size: .9rem; color: var(--ink-muted);
+  text-align: center;
 }
+footer p { margin: .4rem 0; }
 footer code {
   font-family: ui-monospace, "SF Mono", Menlo, monospace;
   font-size: .85em;
 }
 
+/* --- entrance --- */
+@media (prefers-reduced-motion: no-preference) {
+  .masthead > * { animation: settle .7s cubic-bezier(.2,.7,.3,1) both; }
+  .masthead .over-title { animation-delay: .08s; }
+  .masthead h1 { animation-delay: .16s; }
+  .masthead .thesis { animation-delay: .26s; }
+  .masthead .ornament { animation-delay: .36s; }
+  @keyframes settle {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: none; }
+  }
+}
+
 @media (max-width: 480px) {
   html { font-size: 16.5px; }
   body { padding-top: 2rem; }
-  .masthead h1 { font-size: 2.1rem; }
+  .masthead h1 { font-size: 2.3rem; }
 }
