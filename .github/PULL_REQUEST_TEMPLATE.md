@@ -15,7 +15,8 @@ usage arose organically in your session (not prompted for).
 
 - [ ] Class assigned per CONTRIBUTING.md (research validates the class)
 - [ ] Sense(s) in dictionary register, ~25–45 words, genus + differentia
-- [ ] Etymology is one line and classifies the formation
+- [ ] Etymology (neologism/neosemy only) is one line and classifies the
+      formation; vogue entries omit it in favor of `first_use.note`
 - [ ] `first_use` and `attestation` fields complete; url present if published
 - [ ] Private/proprietary context scrubbed
 - [ ] `python3 scripts/validate_entries.py` passes

@@ -53,7 +53,8 @@ actual usage, extract:
   ("transferred from structural engineering to any component whose failure
   propagates").
 
-**Formation** (drives the one-line etymology):
+**Formation** (drives the one-line etymology — neologism and neosemy only;
+vogue entries carry the word's history in `first_use.note` instead):
 
 - Figurative extension: `Figurative extension of *word* ("gloss"), by
   analogy between X and Y.`
@@ -73,7 +74,9 @@ actual usage, extract:
   earns it. No hedging, no "in the context of", no marketing tone.
 - Target 25–45 words per sense. Draft long, cut 50–70%. Compression is the
   actual work.
-- Etymology: always present, always one line.
+- Etymology: neologism and neosemy only, always one line. Vogue entries
+  omit it — fold anything essential into `first_use.note`, where it reads
+  alongside the citation.
 - Number senses even when there is only one (the numeral signals "one sense
   among the word's senses"). Two related senses: most-general first.
 - Part of speech abbreviated: (n.), (v.), (adj.), (n. attrib.).
@@ -98,7 +101,7 @@ Information order is definition-first (Merriam-Webster "TLDR" order):
 1. *(subject label)* Definition in dictionary register.
    *"Example sentence, if one is carried — italic, quoted."*
 
-*Etymology:* One line.
+*Etymology:* One line (neologism/neosemy only; omit for vogue).
 
 *First known use:* From research.md — a dated, linked published source, or
 "Attested <date>, in correspondence between @<handle> and <model>."
@@ -113,7 +116,8 @@ genuinely undecidable.
 
 - Defining the ordinary sense instead of the observed one.
 - Explaining instead of defining: paragraphs, "this term refers to...".
-- Etymology bloat: more than one line.
+- Etymology bloat: more than one line, or any etymology at all on a vogue
+  entry.
 - Leaking private context.
 - Chatty framing around the entry.
 - Presenting before doing the research phase.

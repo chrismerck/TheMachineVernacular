@@ -40,6 +40,8 @@ senses:
       or building their infrastructure.
     example: >         # optional; generalized from the attested usage,
       ...              # scrubbed — never invented from whole cloth
+# etymology: neologism and neosemy only — omit for vogue, where the word's
+# history belongs in first_use.note
 etymology: >
   Figurative extension of *gardener* ("one who tends a garden"), by analogy
   between a maintained knowledge base and a cultivated plot.
@@ -67,8 +69,10 @@ Definitions are written in dictionary register, not chatbot register:
   second sentence must earn its place.
 - An "as distinct from ..." contrast clause when the coinage earns its keep
   by contrast (most do).
-- Etymology is always one line, classifying the formation: figurative
-  extension, blend, repurposed technical term, or de novo coinage.
+- Etymology is for neologism and neosemy entries only: one line classifying
+  the formation — figurative extension, blend, repurposed technical term, or
+  de novo coinage. Vogue entries omit it; the sense's history belongs in
+  `first_use.note`, where it reads alongside the citation.
 - No hedging, no "in the context of", no marketing tone.
 
 ## Attestation standard

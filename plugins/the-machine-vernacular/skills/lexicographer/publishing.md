@@ -18,8 +18,11 @@ unit: one entry file (or one added sense), nothing else.
 content in YAML frontmatter (see any existing entry, or
 CONTRIBUTING.md, for the schema):
 
-    headword, pos, class, senses[{label, definition, example?}], etymology,
+    headword, pos, class, senses[{label, definition, example?}], etymology?,
     first_use{date, type, url?, source?, note?}, attestation{model, date, observer}
+
+`etymology` is required for neologism and neosemy, omitted for vogue —
+a vogue word's history belongs in `first_use.note`.
 
 `attestation.model` is the model whose usage occasioned the entry — your
 own identity if the coinage happened in this session. If the occasioning

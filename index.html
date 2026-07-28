@@ -58,7 +58,10 @@ layout: default
         {% if s.example %}<span class="example">{{ s.example | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span>{% endif %}</li>
       {% endfor %}
     </ol>
-    <p class="apparatus etymology">[{{ e.etymology | markdownify | remove: "<p>" | remove: "</p>" | strip }}]</p>
+    {% if e.etymology and e.class != "vogue" %}
+    <p class="apparatus etymology"><span class="section-label">Etymology</span>
+      {{ e.etymology | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+    {% endif %}
     {% if e.first_use.type == "correspondence" %}
     <p class="apparatus attestation">Attested {{ e.first_use.date | date: "%-d %B %Y" }}, in correspondence
       between <a href="https://github.com/{{ e.attestation.observer }}">@{{ e.attestation.observer }}</a>

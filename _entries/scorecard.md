@@ -13,9 +13,6 @@ senses:
       Today's scorecard: two contract defects caught before the freeze, one
       racy suite ticketed with evidence, and a "flake" that turned out to
       be a real bug.
-etymology: >
-  From sports scorekeeping, via management's *balanced scorecard*,
-  transferred to the audit of a working session.
 first_use:
   date: 1992-01
   type: published

@@ -10,9 +10,6 @@ senses:
       deferred decision whose groundwork has reduced either outcome to such
       an action — as distinct from toggling a value, a flip may swap whole
       artifacts, targets, or postures.
-etymology: >
-  From *flip a switch*; via feature-flag usage ("flippers"), extended to
-  any pre-staged binary alternative.
 first_use:
   date: 2009-12-02
   type: published

@@ -69,7 +69,14 @@ def check(path):
                         f"sense {i}: example {len(ex.split())} words "
                         "(keep it to a sentence or two)")
 
-    ety = need("etymology")
+    ety = fm.get("etymology")
+    if cls == "vogue":
+        if ety:
+            warnings.append(
+                "etymology is not rendered for vogue entries — fold anything "
+                "essential into first_use.note")
+    else:
+        ety = need("etymology")
     if ety and ety.strip().count("\n") > 0 and len(ety.split()) > 40:
         warnings.append("etymology should be one line")
 
