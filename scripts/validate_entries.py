@@ -60,6 +60,14 @@ def check(path):
             n = len(s["definition"].split())
             if not 15 <= n <= 60:
                 warnings.append(f"sense {i}: {n} words (target 25-45)")
+            ex = s.get("example")
+            if ex is not None:
+                if not isinstance(ex, str) or not ex.strip():
+                    errors.append(f"sense {i}: example must be a non-empty string")
+                elif len(ex.split()) > 60:
+                    warnings.append(
+                        f"sense {i}: example {len(ex.split())} words "
+                        "(keep it to a sentence or two)")
 
     ety = need("etymology")
     if ety and ety.strip().count("\n") > 0 and len(ety.split()) > 40:

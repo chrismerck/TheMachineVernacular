@@ -82,7 +82,9 @@ actual usage, extract:
 
 The entry may be published. Remove company names, internal project names,
 and anything identifiable to the user's employer or private conversation,
-unless the user says otherwise. No example sentences drawn from the private
+unless the user says otherwise. An example sentence, if one is carried, must
+be generalized from the attested usage and scrubbed to the same standard —
+never invented from whole cloth, never verbatim from the private
 conversation. Generalize until the definition points at the phenomenon, not
 the situation that birthed it.
 
@@ -94,6 +96,7 @@ Information order is definition-first (Merriam-Webster "TLDR" order):
 **headword** (pos.) — CLASS
 
 1. *(subject label)* Definition in dictionary register.
+   *"Example sentence, if one is carried — italic, quoted."*
 
 *Etymology:* One line.
 

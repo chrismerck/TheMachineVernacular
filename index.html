@@ -54,7 +54,8 @@ layout: default
     <ol class="senses">
       {% for s in e.senses %}
       <li><span class="label">({{ s.label }})</span>
-        {{ s.definition | markdownify | remove: "<p>" | remove: "</p>" }}</li>
+        {{ s.definition | markdownify | remove: "<p>" | remove: "</p>" }}
+        {% if s.example %}<span class="example">{{ s.example | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span>{% endif %}</li>
       {% endfor %}
     </ol>
     <p class="apparatus etymology">[{{ e.etymology | markdownify | remove: "<p>" | remove: "</p>" | strip }}]</p>

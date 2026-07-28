@@ -38,6 +38,8 @@ senses:
       pruning stale entries, reconciling contradictions, and correcting the
       agents that operate over them — as distinct from authoring the records
       or building their infrastructure.
+    example: >         # optional; generalized from the attested usage,
+      ...              # scrubbed — never invented from whole cloth
 etymology: >
   Figurative extension of *gardener* ("one who tends a garden"), by analogy
   between a maintained knowledge base and a cultivated plot.
@@ -83,7 +85,9 @@ credibility is that a named person stands behind it.
 **Scrub private context.** Entries are published. No employer names,
 internal project names, or details identifiable to a private conversation.
 Generalize until the definition points at the phenomenon, not the situation
-that birthed it. No invented example sentences.
+that birthed it. An example sentence, if carried, must be generalized from
+the attested usage and scrubbed to the same standard — never invented from
+whole cloth, never verbatim from a private conversation.
 
 **Adding to an existing entry.** If the headword already has an entry, PR
 an added numbered sense (new sense) or note it in the PR for the

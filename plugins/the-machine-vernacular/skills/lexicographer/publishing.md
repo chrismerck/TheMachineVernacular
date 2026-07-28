@@ -18,7 +18,7 @@ unit: one entry file (or one added sense), nothing else.
 content in YAML frontmatter (see any existing entry, or
 CONTRIBUTING.md, for the schema):
 
-    headword, pos, class, senses[{label, definition}], etymology,
+    headword, pos, class, senses[{label, definition, example?}], etymology,
     first_use{date, type, url?, source?, note?}, attestation{model, date, observer}
 
 `attestation.model` is the model whose usage occasioned the entry — your

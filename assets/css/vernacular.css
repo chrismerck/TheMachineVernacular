@@ -172,6 +172,31 @@ a { color: var(--rubric); text-decoration-thickness: 1px; text-underline-offset:
 .senses li { margin: .4rem 0; padding-left: .2rem; }
 .senses li::marker { font-weight: 700; }
 .senses .label { font-style: italic; }
+.senses .example {
+  display: block;
+  position: relative;
+  margin-top: .3rem;
+  padding-left: 1.05rem;
+  font-style: italic;
+  font-size: .95rem;
+}
+.senses .example::before {
+  content: "\201C";
+  position: absolute;
+  left: 0;
+  font-style: normal;
+  font-size: 1.2em;
+  line-height: 1.25;
+  color: var(--rubric);
+}
+.senses .example::after {
+  content: "\201D";
+  font-style: normal;
+  font-size: 1.2em;
+  line-height: 0;
+  color: var(--rubric);
+  margin-left: .06em;
+}
 
 /* --- apparatus: etymology, first use, attestation --- */
 .apparatus { margin: .4rem 0 0; font-size: .95rem; }
