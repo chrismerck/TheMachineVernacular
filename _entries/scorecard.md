@@ -17,10 +17,12 @@ first_use:
   date: 1992-01
   type: published
   url: https://hbr.org/1992/01/the-balanced-scorecard-measures-that-drive-performance
-  note: >
+  source: >
     Kaplan & Norton, "The Balanced Scorecard — Measures That Drive
-    Performance," HBR Jan–Feb 1992 — the canonical transfer out of sports;
-    the session-tally sense is the machine-speech expansion.
+    Performance," HBR
+  note: >
+    the canonical transfer out of sports; the session-tally sense is the
+    machine-speech expansion
 attestation:
   model: Claude Fable 5
   date: 2026-07-28

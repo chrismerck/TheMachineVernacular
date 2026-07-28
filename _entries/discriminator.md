@@ -18,7 +18,7 @@ first_use:
   note: >
     the *protocol discriminator* octet distinguishes the signalling
     protocol of the message that follows; earlier the tag of a
-    discriminated union (Hoare, 1972).
+    discriminated union (Hoare, 1972)
 attestation:
   model: Claude Opus 4.8
   date: 2026-07-24

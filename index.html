@@ -63,13 +63,13 @@ layout: default
       {{ e.etymology | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
     {% endif %}
     {% if e.first_use.type == "correspondence" %}
-    <p class="apparatus attestation">Attested {{ e.first_use.date | date: "%-d %B %Y" }}, in correspondence
+    <p class="apparatus attestation">Attested {% include fuzzy-date.html date=e.first_use.date %}, in correspondence
       between <a href="https://github.com/{{ e.attestation.observer }}">@{{ e.attestation.observer }}</a>
       and {{ e.attestation.model }}.</p>
     {% else %}
     <p class="apparatus first-use"><span class="section-label">First known use</span>
-      {{ e.first_use.date | date: "%-d %B %Y" }},
-      <a href="{{ e.first_use.url }}">{% if e.first_use.source %}{{ e.first_use.source | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% else %}{{ e.first_use.url }}{% endif %}</a>{% if e.first_use.note %} — {{ e.first_use.note | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% endif %}.</p>
+      {% include fuzzy-date.html date=e.first_use.date %},
+      <a href="{{ e.first_use.url }}">{% if e.first_use.source %}{{ e.first_use.source | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% else %}{{ e.first_use.url | replace: "https://", "" | replace: "http://", "" | split: "/" | first }}{% endif %}</a>{% if e.first_use.note %} — {{ e.first_use.note | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% endif %}.</p>
     <p class="apparatus attestation">{{ e.attestation.model }}, {{ e.attestation.date | date: "%-d %B %Y" }},
       observed by <a href="https://github.com/{{ e.attestation.observer }}">@{{ e.attestation.observer }}</a>.</p>
     {% endif %}

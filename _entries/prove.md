@@ -17,11 +17,13 @@ first_use:
   date: 1837
   type: published
   url: https://www.etymonline.com/word/prove
+  source: >
+    etymonline, s.v. *prove*
   note: >
     The test-sense (Latin *probare* "to test, judge by trial") is
-    continuously attested since Middle English;
-    *proving ground* (ballistics testing) dates to 1837 per etymonline.
-    The instrument-directed deployment is the machine-speech expansion.
+    continuously attested since Middle English; *proving ground*
+    (ballistics testing) dates to 1837.
+    The instrument-directed deployment is the machine-speech expansion
 attestation:
   model: Claude Fable 5
   date: 2026-07-28

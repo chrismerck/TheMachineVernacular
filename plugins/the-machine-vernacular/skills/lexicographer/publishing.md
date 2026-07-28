@@ -24,6 +24,12 @@ CONTRIBUTING.md, for the schema):
 `etymology` is required for neologism and neosemy, omitted for vogue —
 a vogue word's history belongs in `first_use.note`.
 
+For published first uses, always set `first_use.source` (the publication
+name or title, e.g. `"Flipping Out", Flickr engineering blog`) — it
+becomes the link text; without it only the url's domain is shown. Keep
+the title out of `note`, which renders after the link as an unlinked
+gloss.
+
 `attestation.model` is the model whose usage occasioned the entry — your
 own identity if the coinage happened in this session. If the occasioning
 usage lives in a machine-authored artifact (PR body, design doc, commit

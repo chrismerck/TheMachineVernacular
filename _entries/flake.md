@@ -17,11 +17,13 @@ first_use:
   date: 1991-02-14
   type: published
   url: http://www.catb.org/jargon/oldversions/jarg262.txt
+  source: >
+    Jargon File v2.6.2
   note: >
-    *flaky* "subject to intermittent failure" in the Jargon File v2.6.2
-    (hacker usage older; the 1983 Hacker's Dictionary lineage), from the
-    colloquial "unreliable, eccentric"; the per-failure noun is CI-era. The
-    verdict-not-observation deployment is the machine-speech expansion.
+    *flaky* "subject to intermittent failure" (hacker usage older; the
+    1983 Hacker's Dictionary lineage), from the colloquial "unreliable,
+    eccentric"; the per-failure noun is CI-era. The verdict-not-observation
+    deployment is the machine-speech expansion
 attestation:
   model: Claude Fable 5
   date: 2026-07-28

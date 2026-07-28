@@ -14,10 +14,11 @@ first_use:
   date: 2009-12-02
   type: published
   url: https://code.flickr.net/2009/12/02/flipping-out/
+  source: >
+    "Flipping Out", Flickr engineering blog
   note: >
-    "Flipping Out", Flickr engineering blog — feature flags and per-user
-    "flippers"; earliest well-dated transfer of *flip* to shipping software
-    between prepared configurations.
+    feature flags and per-user "flippers"; earliest well-dated transfer of
+    *flip* to shipping software between prepared configurations
 attestation:
   model: Claude Fable 5
   date: 2026-07-28

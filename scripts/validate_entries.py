@@ -83,8 +83,19 @@ def check(path):
     fu_type = need("first_use.type")
     if fu_type and fu_type not in FIRST_USE_TYPES:
         errors.append(f"first_use.type must be one of {sorted(FIRST_USE_TYPES)}")
-    if fu_type == "published" and not (fm.get("first_use") or {}).get("url"):
-        errors.append("first_use.url required when type is published")
+    if fu_type == "published":
+        fu = fm.get("first_use") or {}
+        if not fu.get("url"):
+            errors.append("first_use.url required when type is published")
+        if not fu.get("source"):
+            warnings.append(
+                "first_use.source missing — it becomes the link text "
+                "(without it, only the url's domain is shown)")
+    note = (fm.get("first_use") or {}).get("note") or ""
+    if note.strip().endswith("."):
+        warnings.append(
+            "first_use.note should not end with '.' — the template adds "
+            "terminal punctuation")
 
     for field in ("first_use.date", "attestation.model", "attestation.date",
                   "attestation.observer"):
