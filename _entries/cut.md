@@ -9,6 +9,9 @@ senses:
       mid-period (cut A) and end-of-period (cut B) — to which work items are
       assigned and at which a release is branched; the schedulable slot
       itself, as distinct from the act of cutting the release.
+    example: >
+      The integration was floated at planning but never given a cut;
+      pencil it in for cut B.
 etymology: >
   Nominalized from *cut a release* ("branch and freeze code for shipment");
   the scheduled occasion of the act, reanalyzed as a planning bucket.
