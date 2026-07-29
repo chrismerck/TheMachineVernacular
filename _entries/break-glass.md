@@ -19,16 +19,17 @@ senses:
       procedure-gated ceremony; a system's named emergency door, as distinct
       from an undocumented hole.
 first_use:
-  date: "2005"
+  date: "2004"
   type: published
-  url: https://hipaa.yale.edu/security/break-glass-procedure-granting-emergency-access-critical-ephi-systems
+  url: https://web.archive.org/web/20180104061049/http://www.medicalimaging.org/wp-content/uploads/2011/02/Break-Glass_-_Emergency_Access_to_Healthcare_Systems.pdf
   source: >
-    Yale HIPAA Security, "Break Glass Procedure"
+    "Break-Glass: An Approach to Granting Emergency Access to Healthcare
+    Systems", Joint NEMA/COCIR/JIRA Security and Privacy Committee white
+    paper
   note: >
-    Approximate. From fire-alarm signage ("break glass in case of
-    emergency"); in healthcare-IT usage as "break-the-glass" emergency
-    access to patient records by the mid-2000s, under the 2003 HIPAA
-    Security Rule's emergency-access provision (the rule mandates the
+    From fire-alarm signage ("break glass in case of emergency"); named in
+    healthcare IT for emergency access to patient records under the 2003
+    HIPAA Security Rule's emergency-access provision (the rule mandates the
     procedure, not the name); later standard in cloud privileged-access
     design. The machine-speech expansion is range: from emergency *account*
     to any deny-exempt principal, path, or ceremony in policy design
