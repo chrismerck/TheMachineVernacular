@@ -22,7 +22,7 @@ first_use:
     Earliest found software-domain transfer; the general figurative sense
     ("a subject with concealed or unpredictable implications") is
     dictionary-standard. The machine usage's novelty is frequency and the
-    sharpened armed/detonated structure, not the metaphor itself.
+    sharpened armed/detonated structure, not the metaphor itself
 attestation:
   model: Claude Fable 5
   date: 2026-08-03
